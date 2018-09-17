@@ -1,0 +1,24 @@
+{
+  "name": "solo-react-skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com> (https://github.com/imbhargav5)",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "16.5.1",
+    "react-dom": "16.5.1"
+  },
+  "dependencies": {
+    "@taskr/babel": "1.1.0",
+    "@taskr/clear": "1.1.0",
+    "@taskr/esnext": "1.1.0",
+    "@taskr/shell": "1.1.0",
+    "@taskr/watch": "1.1.0",
+    "taskr": "1.1.0"
+  }
+}
