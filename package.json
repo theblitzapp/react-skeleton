@@ -4,21 +4,59 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "test": "jest",
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
+    "build": "babel src --out-dir lib",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "Bhargav Ponnapalli <bhargavponnapalli.5@gmail.com> (https://github.com/imbhargav5)",
   "license": "MIT",
   "devDependencies": {
-    "react": "16.5.1",
-    "react-dom": "16.5.1"
-  },
-  "dependencies": {
-    "@taskr/babel": "1.1.0",
+    "@babel/cli": "7.0.0",
+    "@babel/core": "7.0.1",
+    "@babel/preset-env": "7.0.0",
+    "@babel/preset-react": "7.0.0",
+    "@taskr/babel": "1.1.0-next.1",
     "@taskr/clear": "1.1.0",
     "@taskr/esnext": "1.1.0",
     "@taskr/shell": "1.1.0",
     "@taskr/watch": "1.1.0",
+    "@zeit/next-mdx": "1.1.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "23.6.0",
+    "babel-plugin-lodash": "3.3.4",
+    "babel-preset-imbhargav5": "2.0.0",
+    "enzyme": "3.6.0",
+    "enzyme-adapter-react-16": "1.5.0",
+    "jest": "23.6.0",
+    "jest-styled-components": "6.2.0",
+    "jsdom": "12.0.0",
+    "next": "7.0.0-canary.18",
+    "react": "16.5.1",
+    "react-dom": "16.5.1",
+    "react-test-renderer": "16.5.1",
+    "rimraf": "2.6.2",
+    "styled-components": "4.0.0-beta.5",
     "taskr": "1.1.0"
+  },
+  "jest": {
+    "globals": {
+      "__DEV__": true
+    },
+    "testURL": "http://localhost",
+    "clearMocks": true,
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/__tests__/"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/test/enzymeSetup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/pages"
+    ]
   }
 }

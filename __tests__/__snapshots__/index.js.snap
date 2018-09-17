@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`skeleton should render dummy data when predicate returns true 1`] = `
+<div>
+  <h1>
+    __________
+  </h1>
+  <p>
+    ___________
+  </p>
+</div>
+`;
+
+exports[`skeleton should render real data when predicate returns false 1`] = `
+<div>
+  <h1>
+    Eren Yeager
+  </h1>
+  <p>
+    Attack on Titan protagonist
+  </p>
+</div>
+`;
