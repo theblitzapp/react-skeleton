@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`skeleton should render dummy data when predicate returns true 1`] = `
-<div>
+exports[`skeleton basic should render dummy data when predicate returns true 1`] = `
+<div
+  className="src__StyledWrappedComponent-u89yob-0 eBORVg"
+>
   <h1>
     __________
   </h1>
@@ -11,7 +13,7 @@ exports[`skeleton should render dummy data when predicate returns true 1`] = `
 </div>
 `;
 
-exports[`skeleton should render real data when predicate returns false 1`] = `
+exports[`skeleton basic should render real data when predicate returns false 1`] = `
 <div>
   <h1>
     Eren Yeager

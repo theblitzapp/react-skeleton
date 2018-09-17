@@ -4,7 +4,7 @@ export const defaultBaseColor = "#eee";
 
 export const defaultHighlightColor = "#f5f5f5";
 
-const defaultAnimation = keyframes`
+export const skeletonKeyframes = keyframes`
   0% {
     background-position: -200px 0;
   }
@@ -13,13 +13,18 @@ const defaultAnimation = keyframes`
   }
 `;
 
-export const skeletonClass = css`
-  background-color: ${defaultBaseColor};
+export const createStyleClass = (
+  baseColor = defaultBaseColor,
+  highlightColor = defaultHighlightColor,
+  duration = 2
+) => css`
+  color: ${baseColor};
+  background-color: ${baseColor};
   background-image: linear-gradient(
     90deg,
-    ${defaultBaseColor},
-    ${defaultHighlightColor},
-    ${defaultBaseColor}
+    ${baseColor},
+    ${highlightColor},
+    ${baseColor}
   );
   background-size: 200px 100%;
   background-repeat: no-repeat;
@@ -27,4 +32,7 @@ export const skeletonClass = css`
   display: inline-block;
   line-height: 1;
   width: 100%;
+  animation: ${skeletonKeyframes} ${duration}s ease-in-out infinite;
 `;
+
+export const skeletonCSS = createStyleClass();

@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import Demo from "../components/Demo.md";
 
 class Home extends Component {
   render() {
-    return <div>Home</div>;
+    return (
+      <div>
+        <Demo />
+      </div>
+    );
   }
 }
 
