@@ -3,15 +3,18 @@ import styled, { css, keyframes } from "styled-components";
 import getDisplayName from "./utils/getDisplayName";
 import { createSkeletonCSSMixin, skeletonKeyframes } from "./ui";
 
+const defaultMixin = createSkeletonCSSMixin();
+
 const SkeletonCSSContext = createContext(null);
 
-const createSkeleton = (mixinFactory = createSkeletonCSSMixin) => {
+const createSkeleton = (skeletonMixin = defaultMixin) => {
   // helper function to create elements with styling built in
-  const createElement = (BaseElement, skeletonMixinFactory = mixinFactory) => {
+  const createElement = (BaseElement, mixin = skeletonMixin) => {
     // override default style
     const StyledBaseElement = styled(BaseElement)`
-      ${props => props.showSkeleton && skeletonMixinFactory()};
+      ${props => props.showSkeleton && mixin};
     `;
+
     const RefForwardedElement = forwardRef(
       (props, ref) =>
         props.showSkeleton ? (

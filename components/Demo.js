@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Card from "./Card";
 
 const FakeLoaderButton = styled.button`
   padding: 10px 20px;
@@ -11,41 +10,41 @@ const FakeLoaderButton = styled.button`
   border-color: dodgerblue;
 `;
 
-class Demo extends Component {
-  state = {
-    loading: false
-  };
-  onFakeLoad = () => {
-    this.setState({
-      loading: true
-    });
-    this.timeout = setTimeout(() => {
+export default WrappedComponent =>
+  class Demo extends Component {
+    state = {
+      loading: false
+    };
+    onFakeLoad = () => {
       this.setState({
-        loading: false
+        loading: true
       });
-    }, 3000);
+      this.timeout = setTimeout(() => {
+        this.setState({
+          loading: false
+        });
+      }, 1500);
+    };
+    componentWillUnmount() {
+      clearTimeout(this.timeout);
+    }
+    render() {
+      const props = this.state.loading
+        ? {}
+        : {
+            title: "Eren Yeager",
+            description: "Attack on Titan protagonist",
+            img: "/static/fn-512.png"
+          };
+      return (
+        <>
+          <p>
+            <FakeLoaderButton onClick={this.onFakeLoad}>
+              Load Data
+            </FakeLoaderButton>
+          </p>
+          <WrappedComponent {...props} />
+        </>
+      );
+    }
   };
-  componentWillUnmount() {
-    clearTimeout(this.timeout);
-  }
-  render() {
-    const props = this.state.loading
-      ? {}
-      : {
-          title: "Eren Yeager",
-          description: "Attack on Titan protagonist"
-        };
-    return (
-      <>
-        <p>
-          <FakeLoaderButton onClick={this.onFakeLoad}>
-            Load Data
-          </FakeLoaderButton>
-        </p>
-        <Card {...props} />
-      </>
-    );
-  }
-}
-
-export default Demo;
