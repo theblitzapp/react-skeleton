@@ -1,86 +1,107 @@
 import React, { Component } from "react";
 import TestRenderer from "react-test-renderer";
 import { mount } from "enzyme";
-import createSkeleton from "../src";
-import { expectCSSMatches } from "../src/test/expectCSSMatches";
+import styled from "styled-components";
+import skeletonFactory, { createSkeletonCSSMixin } from "../src";
+import { expectCSSMatchesSnapshot } from "../src/test/expectCSSMatches";
 
 describe("skeleton basic", () => {
-  let predicate, Skeleton;
+  let predicate, SkeletonComponent;
   beforeEach(() => {
     predicate = props => {
       return !props.title;
     };
 
+    const Skeleton = skeletonFactory();
+
+    const Heading = Skeleton.createElement(styled.h1``);
+
+    const Paragraph = Skeleton.createElement(styled.p``);
+
     class Card extends Component {
       render() {
-        const { title, description, className } = this.props;
+        const { title, description } = this.props;
         return (
-          <div className={className}>
-            <h1>{title}</h1>
-            <p>{description}</p>
+          <div>
+            <Heading>{title}</Heading>
+            <Paragraph>{description}</Paragraph>
           </div>
         );
       }
     }
 
-    Skeleton = createSkeleton(() => {
-      return {
-        title: "__________",
-        description: "___________"
-      };
+    SkeletonComponent = Skeleton.createComponent(() => {
+      return { title: "__________", description: "___________" };
     }, predicate)(Card);
   });
   it("should work", () => {
-    expect(Skeleton).toBeDefined();
+    expect(SkeletonComponent).toBeDefined();
   });
   it("should have the right displayName", () => {
-    expect(Skeleton.displayName).toBe("SkeletonCard");
+    expect(SkeletonComponent.displayName).toBe("SkeletonCard");
   });
   it("should render dummy data when predicate returns true", () => {
-    const wrapper = TestRenderer.create(<Skeleton />);
+    const wrapper = TestRenderer.create(<SkeletonComponent />);
     expect(wrapper.toJSON()).toMatchSnapshot();
-    const shallowWrapper = mount(<Skeleton />);
-    //must have right className
-    // please do not change the classname
-    expect(shallowWrapper.find("div").prop("className")).toEqual(
-      "src__StyledWrappedComponent-u89yob-0 eBORVg"
-    );
+  });
 
-    expectCSSMatches(`
-      .src__StyledWrappedComponent-u89yob-0{ } 
-      .eBORVg{ 
-        background-color:#eee; 
-        background-image:linear-gradient( 90deg,#eee,#f5f5f5,#eee ); 
-        background-size:200px 100%; 
-        background-repeat:no-repeat; 
-        border-radius:4px; 
-        display:inline-block; 
-        line-height:1; 
-        width:100%; 
-        -webkit-animation:hNBTQs 2s ease-in-out infinite; 
-        animation:hNBTQs 2s ease-in-out infinite; 
-      } 
-      @-webkit-keyframes hNBTQs{
-         0%{ 
-           background-position:-200px 0; 
-         } 100%{ 
-           background-position:calc(200px + 100%) 0; 
-          } 
-      } 
-      @keyframes hNBTQs{
-         0%{ 
-           background-position:-200px 0; 
-         } 100%{ 
-           background-position:calc(200px + 100%) 0; 
-         } 
-      } 
-    `);
+  it("should load css correctly", () => {
+    const wrapper = mount(<SkeletonComponent />);
+    expectCSSMatchesSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 
   it("should render real data when predicate returns false", () => {
     const wrapper = TestRenderer.create(
-      <Skeleton title="Eren Yeager" description="Attack on Titan protagonist" />
+      <SkeletonComponent
+        title="Eren Yeager"
+        description="Attack on Titan protagonist"
+      />
     );
     expect(wrapper.toJSON()).toMatchSnapshot();
+  });
+});
+
+describe("skeleton elements", () => {
+  let predicate, Skeleton, SkeletonComponent, Heading, Paragraph;
+  beforeEach(() => {
+    predicate = props => {
+      return !props.title;
+    };
+
+    Skeleton = skeletonFactory();
+
+    Heading = Skeleton.createElement(styled.h1``);
+
+    Paragraph = styled.p``;
+
+    class Card extends Component {
+      render() {
+        const { title, description } = this.props;
+        return (
+          <div>
+            <Heading>{title}</Heading>
+            <Paragraph>{description}</Paragraph>
+          </div>
+        );
+      }
+    }
+
+    SkeletonComponent = Skeleton.createComponent(() => {
+      return { title: "__________", description: "___________" };
+    }, predicate)(Card);
+  });
+  it("skeleton element shouldn't have skeleton styles when data is present", () => {
+    const wrapper = mount(<SkeletonComponent title={"Eren"} />);
+    expectCSSMatchesSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  it("skeleton element should have skeleton styles when data is not present", () => {
+    const wrapper = mount(
+      <SkeletonComponent description={"Attack on Titan"} />
+    );
+    expectCSSMatchesSnapshot();
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });

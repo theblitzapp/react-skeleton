@@ -41,7 +41,7 @@
     "react-dom": "16.5.1",
     "react-test-renderer": "16.5.1",
     "rimraf": "2.6.2",
-    "styled-components": "4.0.0-beta.5",
+    "styled-components": "4.0.0-beta.6",
     "taskr": "1.1.0"
   },
   "jest": {

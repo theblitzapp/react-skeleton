@@ -1,4 +1,4 @@
-import { css, keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const defaultBaseColor = "#eee";
 
@@ -13,7 +13,7 @@ export const skeletonKeyframes = keyframes`
   }
 `;
 
-export const createStyleClass = (
+export const createSkeletonCSSMixin = (
   baseColor = defaultBaseColor,
   highlightColor = defaultHighlightColor,
   duration = 2
@@ -34,5 +34,3 @@ export const createStyleClass = (
   width: 100%;
   animation: ${skeletonKeyframes} ${duration}s ease-in-out infinite;
 `;
-
-export const skeletonCSS = createStyleClass();

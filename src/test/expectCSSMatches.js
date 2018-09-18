@@ -1,3 +1,5 @@
+// brought this over from styled-components
+
 const stripComments = str => str.replace(/\/\*.*?\*\/\n?/g, "");
 
 export const stripWhitespace = str =>
@@ -29,6 +31,24 @@ export const expectCSSMatches = (
     return stripped;
   } else {
     expect(css).toEqual(expectation);
+    return css;
+  }
+};
+
+export const expectCSSMatchesSnapshot = (opts = { ignoreWhitespace: true }) => {
+  const css = Array.from(document.querySelectorAll("style"))
+    .map(tag => tag.innerHTML)
+    .join("\n")
+    .replace(/ {/g, "{")
+    .replace(/:\s+/g, ":")
+    .replace(/:\s+;/g, ":;");
+
+  if (opts.ignoreWhitespace) {
+    const stripped = stripWhitespace(stripComments(css));
+    expect(stripped).toMatchSnapshot();
+    return stripped;
+  } else {
+    expect(css).toMatchSnapshot();
     return css;
   }
 };
