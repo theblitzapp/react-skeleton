@@ -4,11 +4,13 @@ import CustomElementStyle from "./CustomElementStyle"
 
 # @solo.gg/react-skeleton
 
-This component shows a skeleton when data isn't loaded yet for a component.
+⚡⚡⚡ Full fledged flexible skeleton loader for styled-components ⚡⚡⚡
 
 <br/><br/><br/><br/>
 
-## Same styles (default) for all elements
+# Examples:
+
+## 1. Same styles (default) for all elements
 
 <BasicDemoWithoutImagePlaceHolder/>
 
@@ -58,7 +60,7 @@ const SkeletonCard = Skeleton.createComponent(
 
 <br/><br/><br/><br/>
 
-## Same styles (default) for all elements except Image now has placeholder
+## 2.Same styles (default) for all elements except Image now has placeholder
 
 <Basic/>
 
@@ -105,7 +107,7 @@ const SkeletonCard = Skeleton.createComponent(
 
 <br/><br/><br/><br/>
 
-## Modified styles (default except different colors) for all elements
+## 3.Modified styles (default except different colors) for all elements
 
 <CustomStyle/>
 
@@ -159,7 +161,7 @@ const SkeletonCard = Skeleton.createComponent(
 
 <br/><br/><br/><br/>
 
-## Modified styles for one element (default except different colors) , default for all elements
+## 4.Modified styles for one element (default except different colors) , default for all elements
 
 <CustomElementStyle/>
 

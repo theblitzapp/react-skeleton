@@ -110,6 +110,16 @@ class Layout extends Component {
         <GlobalStyle />
         <Navbar />
         {this.props.children}
+        <br />
+        <br />
+        <p>
+          {" "}
+          Made with ❤️ by{" "}
+          <a href="https://github.com/imbhargav5" target="_blank">
+            @imbhargav5
+          </a>{" "}
+          and Solo team
+        </p>
       </Container>
     );
   }
