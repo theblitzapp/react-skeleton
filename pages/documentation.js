@@ -3,6 +3,8 @@ import styled from "styled-components";
 import SkeletonFactory from "../page-components/documentation/skeleton-factory.md";
 import CreateElement from "../page-components/documentation/create-element.md";
 import CreateComponent from "../page-components/documentation/create-component.md";
+import CreateSkeletonCSSMixin from "../page-components/documentation/create-skeletoncss-mixin.md";
+
 const Section = styled.section`
   padding: 4rem 0;
   border-bottom: 2px dashed black;
@@ -23,6 +25,9 @@ class Documentation extends Component {
         </Section>
         <Section>
           <CreateComponent />
+        </Section>
+        <Section>
+          <CreateSkeletonCSSMixin />
         </Section>
       </div>
     );
