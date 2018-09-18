@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled, { createGlobalStyle } from "styled-components";
+import Navbar from "./Navbar";
 
 const GlobalStyle = createGlobalStyle`
     html, body{
@@ -7,12 +8,10 @@ const GlobalStyle = createGlobalStyle`
         background: lightskyblue;
         font-size: 16px;
     }
-    body{     
-        padding: 4rem 0;   
-    }
+
     .prism-code {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1rem;
     white-space: pre;
     background-color: #1D1F21;
     color: #C5C8C6;
@@ -97,7 +96,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Container = styled.div`
-  max-width: 780px;
+  max-width: 900px;
   margin: auto;
   box-shadow: 0 2px 6px -2px black;
   background: #eee;
@@ -109,6 +108,7 @@ class Layout extends Component {
     return (
       <Container>
         <GlobalStyle />
+        <Navbar />
         {this.props.children}
       </Container>
     );
