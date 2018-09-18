@@ -1,7 +1,14 @@
 {
   "presets": [
     "@babel/preset-react",
-    "@babel/preset-env",
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
     "babel-preset-imbhargav5"
   ],
   "plugins": ["babel-plugin-styled-components"]

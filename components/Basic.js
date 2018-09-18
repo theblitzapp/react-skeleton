@@ -59,4 +59,17 @@ const SC = Skeleton.createComponent(
   ({ title }) => !title
 )(Card);
 
+const SC2 = Skeleton.createComponent(
+  () => {
+    return {
+      title: "_____",
+      description: "___________",
+      img: ""
+    };
+  },
+  ({ title }) => !title
+)(Card);
+
+export const BasicDemoWithoutImagePlaceHolder = createDemo(SC2);
+
 export default createDemo(SC);

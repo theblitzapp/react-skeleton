@@ -34,7 +34,7 @@ export default WrappedComponent =>
         : {
             title: "Eren Yeager",
             description: "Attack on Titan protagonist",
-            img: "/static/fn-512.png"
+            img: "/static/aot.jpg"
           };
       return (
         <>
