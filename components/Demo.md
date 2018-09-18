@@ -13,11 +13,37 @@ This component shows a skeleton when data isn't loaded yet for a component.
 
 <BasicDemoWithoutImagePlaceHolder/>
 
+```jsx
+const SkeletonCard = Skeleton.createComponent(
+  () => {
+    return {
+      title: "_____",
+      description: "___________",
+      img: ""
+    };
+  },
+  ({ title }) => !title
+)(Card);
+```
+
 <br/><br/><br/><br/>
 
 ## Same styles (default) for all elements except Image now has placeholder
 
 <Basic/>
+
+```jsx
+const SkeletonCard = Skeleton.createComponent(
+  () => {
+    return {
+      title: "_____",
+      description: "___________",
+      img: "/static/placeholder100x100.png"
+    };
+  },
+  ({ title }) => !title
+)(Card);
+```
 
 <br/><br/><br/><br/>
 
