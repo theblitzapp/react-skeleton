@@ -7,10 +7,13 @@
     "dev": "next",
     "test": "jest",
     "clean": "rimraf lib",
-    "prebuild": "npm run clean",
-    "build": "babel src --out-dir lib",
-    "prepublish": "npm run build && npm run test",
-    "test:watch": "jest --watch"
+    "prerelease": "npm run clean",
+    "release": "babel src --out-dir lib",
+    "build": "next build",
+    "start": "next start",
+    "prepublish": "npm run release && npm run test",
+    "test:watch": "jest --watch",
+    "deploy": "now && now alias"
   },
   "keywords": [],
   "author": "solo.gg",
@@ -74,5 +77,22 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/solomidnet/react-skeleton.git"
+  },
+  "now": {
+    "name": "react-skeleton",
+    "alias": "solo-gg-react-skeleton",
+    "type": "npm",
+    "public": true,
+    "files": [
+      "__tests__",
+      "pages",
+      "page-components",
+      "components",
+      "static",
+      "src",
+      ".babelrc",
+      "next.config.js",
+      "package.json"
+    ]
   }
 }
