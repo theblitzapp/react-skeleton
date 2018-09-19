@@ -11,3 +11,5 @@ static
 .vscode
 __diff_output__
 *.log
+Dockerfile
+.dockerignore

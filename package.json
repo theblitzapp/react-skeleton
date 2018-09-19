@@ -3,12 +3,13 @@
   "version": "0.0.7",
   "description": "⚡⚡⚡ Full fledged flexible skeleton loader for styled-components ⚡⚡⚡",
   "main": "lib/index.js",
+  "homepage": "http://solo-gg-react-skeleton.now.sh",
   "scripts": {
     "dev": "next",
     "test": "jest",
     "clean": "rimraf lib",
-    "prerelease": "npm run clean",
-    "release": "babel src --out-dir lib",
+    "prereleasepkg": "npm run clean",
+    "releasepkg": "babel src --out-dir lib",
     "build": "next build",
     "start": "next start",
     "prepublish": "npm run release && npm run test",
@@ -81,18 +82,7 @@
   "now": {
     "name": "react-skeleton",
     "alias": "solo-gg-react-skeleton",
-    "type": "npm",
-    "public": true,
-    "files": [
-      "__tests__",
-      "pages",
-      "page-components",
-      "components",
-      "static",
-      "src",
-      ".babelrc",
-      "next.config.js",
-      "package.json"
-    ]
+    "type": "docker",
+    "public": true
   }
 }
