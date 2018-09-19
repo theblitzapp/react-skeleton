@@ -5,7 +5,7 @@ Helps create a mixin which is a variant of the default mixin for easy usage.
 ### Basic usage
 
 ```jsx
-import skeletonFactory, {createSkeletonCSSMixin} from "@solo.gg/react-skeleton";
+import skeletonFactory, {createSkeletonCSSMixin} from "solo.gg/react-skeleton";
 
 const defaultMixin = createSkeletonCSSMixin()
 
@@ -19,7 +19,7 @@ const Skeleton = skeletonFactory(defaultMixin);
 ### Custom colors
 
 ```jsx
-import skeletonFactory, {createSkeletonCSSMixin} from "@solo.gg/react-skeleton";
+import skeletonFactory, {createSkeletonCSSMixin} from "solo.gg/react-skeleton";
 
 const customMixin = createSkeletonCSSMixin("#aaa","#ccc", 5)
 

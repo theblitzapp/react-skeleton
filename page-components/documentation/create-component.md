@@ -5,7 +5,7 @@ This function helps create a component which governs when to show skeleton based
 ### Usage
 
 ```jsx
-import skeletonFactory from "@solo.gg/react-skeleton";
+import skeletonFactory from "solo.gg/react-skeleton";
 
 const Skeleton = skeletonFactory();
 // create an element

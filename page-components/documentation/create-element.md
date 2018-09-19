@@ -5,7 +5,7 @@ Helps you create a react element with optional custom mixin else uses a default 
 ### Basic usage
 
 ```jsx
-import skeletonFactory from "@solo.gg/react-skeleton";
+import skeletonFactory from "solo.gg/react-skeleton";
 
 const Skeleton = skeletonFactory();
 
@@ -25,7 +25,7 @@ const SkeletonCard = Skeleton.createComponent(...)(Card)
 Optionally you can override the mixin which was used in the factory function
 
 ```jsx
-import skeletonFactory from "@solo.gg/react-skeleton";
+import skeletonFactory from "solo.gg/react-skeleton";
 
 // render red border in skeleton mode
 const skeletonMixin = css`
