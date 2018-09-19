@@ -9,6 +9,7 @@
     "clean": "rimraf lib",
     "prebuild": "npm run clean",
     "build": "babel src --out-dir lib",
+    "prepublish": "npm run build && npm run test",
     "test:watch": "jest --watch"
   },
   "keywords": [],
