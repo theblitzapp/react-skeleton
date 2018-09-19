@@ -6,7 +6,7 @@ css mixin, else uses a default mixin
 ### Basic usage
 
 ```jsx
-import skeletonFactory from "solo.gg/react-skeleton";
+import skeletonFactory from "@solo.gg/react-skeleton";
 
 const Skeleton = skeletonFactory();
 ```
@@ -14,7 +14,7 @@ const Skeleton = skeletonFactory();
 ### Custom usage
 
 ```jsx
-import skeletonFactory from "solo.gg/react-skeleton";
+import skeletonFactory from "@solo.gg/react-skeleton";
 import { css } from "styled-components";
 
 // render red border in skeleton mode

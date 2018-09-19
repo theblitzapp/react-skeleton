@@ -2,7 +2,7 @@ import Basic, {BasicDemoWithoutImagePlaceHolder} from "./Basic"
 import CustomStyle from "./CustomStyle"
 import CustomElementStyle from "./CustomElementStyle"
 
-# solo.gg/react-skeleton
+# @solo.gg/react-skeleton
 
 ⚡⚡⚡ Full fledged flexible skeleton loader for styled-components ⚡⚡⚡
 
@@ -16,7 +16,7 @@ import CustomElementStyle from "./CustomElementStyle"
 
 ```jsx
 // other imports
-import skeletonFactory from "solo.gg/react-skeleton";
+import skeletonFactory from "@solo.gg/react-skeleton";
 
 // create skeleton
 const Skeleton = skeletonFactory();
@@ -66,7 +66,7 @@ const SkeletonCard = Skeleton.createComponent(
 
 ```jsx
 // other imports
-import skeletonFactory from "solo.gg/react-skeleton";
+import skeletonFactory from "@solo.gg/react-skeleton";
 
 const Skeleton = skeletonFactory();
 
@@ -115,7 +115,7 @@ const SkeletonCard = Skeleton.createComponent(
 // other imports
 import skeletonFactory, {
   createSkeletonCSSMixin
-} from "solo.gg/react-skeleton";
+} from "@solo.gg/react-skeleton";
 
 const baseColor = "dodgerblue";
 const highlightColor = "royalblue";
@@ -169,7 +169,7 @@ const SkeletonCard = Skeleton.createComponent(
 // other imports
 import skeletonFactory, {
   createSkeletonCSSMixin
-} from "solo.gg/react-skeleton";
+} from "@solo.gg/react-skeleton";
 
 const baseColor = "dodgerblue";
 const highlightColor = "royalblue";
