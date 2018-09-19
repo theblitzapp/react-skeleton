@@ -1,0 +1,12 @@
+# This is the same as .gitignore + benchmarks/ folder
+node_modules
+dist
+.next
+__tests__
+pages
+page-components
+components
+.DS_Store
+.vscode
+__diff_output__
+*.log
