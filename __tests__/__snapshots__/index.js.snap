@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`skeleton basic should load css correctly 1`] = `".src__StyledBaseElement-u89yob-0{ } .hSdAbR{ color:#eee; background-color:#eee; background-image:linear-gradient( 90deg,#eee,#f5f5f5,#eee ); background-size:200px 100%; background-repeat:no-repeat; border-radius:4px; display:inline-block; line-height:1; width:100%; -webkit-animation:hNBTQs 2s ease-in-out infinite; animation:hNBTQs 2s ease-in-out infinite; } @-webkit-keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } @keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } "`;
+exports[`skeleton basic should load css correctly 1`] = `".src__StyledBaseElement-sc-166q8jb-0{ } .lcMkxs{ color:#eee; background-color:#eee; background-image:linear-gradient( 90deg,#eee,#f5f5f5,#eee ); background-size:200px 100%; background-repeat:no-repeat; border-radius:4px; display:inline-block; line-height:1; width:100%; -webkit-animation:hNBTQs 2s ease-in-out infinite; animation:hNBTQs 2s ease-in-out infinite; } @-webkit-keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } @keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } "`;
 
-exports[`skeleton basic should load css correctly 2`] = `"<div><h1 class=\\"src__StyledBaseElement-u89yob-0 hSdAbR\\">__________</h1><p class=\\"src__StyledBaseElement-u89yob-0 hSdAbR\\">___________</p></div>"`;
+exports[`skeleton basic should load css correctly 2`] = `"<div><h1 class=\\"src__StyledBaseElement-sc-166q8jb-0 lcMkxs\\">__________</h1><p class=\\"src__StyledBaseElement-sc-166q8jb-0 lcMkxs\\">___________</p></div>"`;
 
 exports[`skeleton basic should render dummy data when predicate returns true 1`] = `
 <div>
   <h1
-    className="src__StyledBaseElement-u89yob-0 hSdAbR"
+    className="src__StyledBaseElement-sc-166q8jb-0 lcMkxs"
   >
     __________
   </h1>
   <p
-    className="src__StyledBaseElement-u89yob-0 hSdAbR"
+    className="src__StyledBaseElement-sc-166q8jb-0 lcMkxs"
   >
     ___________
   </p>
@@ -22,22 +22,22 @@ exports[`skeleton basic should render dummy data when predicate returns true 1`]
 exports[`skeleton basic should render real data when predicate returns false 1`] = `
 <div>
   <h1
-    className="__tests____Heading-sc-1v531qa-0 hRViuH"
+    className="__tests____Heading-mqc8ei-0 jcbSYm"
   >
     Eren Yeager
   </h1>
   <p
-    className="__tests____Paragraph-sc-1v531qa-1 hRjazX"
+    className="__tests____Paragraph-mqc8ei-1 kBWLwu"
   >
     Attack on Titan protagonist
   </p>
 </div>
 `;
 
-exports[`skeleton elements skeleton element should have skeleton styles when data is not present 1`] = `".__tests____Heading-sc-1v531qa-0{ } .src__StyledBaseElement-u89yob-0{ } .hSdAbR{ color:#eee; background-color:#eee; background-image:linear-gradient( 90deg,#eee,#f5f5f5,#eee ); background-size:200px 100%; background-repeat:no-repeat; border-radius:4px; display:inline-block; line-height:1; width:100%; -webkit-animation:hNBTQs 2s ease-in-out infinite; animation:hNBTQs 2s ease-in-out infinite; } .__tests____Paragraph-sc-1v531qa-1{ } @-webkit-keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } @keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } .__tests____Heading-sc-1v531qa-2{ } .__tests____Paragraph-sc-1v531qa-3{ } "`;
+exports[`skeleton elements skeleton element should have skeleton styles when data is not present 1`] = `".__tests____Heading-mqc8ei-0{ } .src__StyledBaseElement-sc-166q8jb-0{ } .lcMkxs{ color:#eee; background-color:#eee; background-image:linear-gradient( 90deg,#eee,#f5f5f5,#eee ); background-size:200px 100%; background-repeat:no-repeat; border-radius:4px; display:inline-block; line-height:1; width:100%; -webkit-animation:hNBTQs 2s ease-in-out infinite; animation:hNBTQs 2s ease-in-out infinite; } .__tests____Paragraph-mqc8ei-1{ } @-webkit-keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } @keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } .__tests____Heading-mqc8ei-2{ } .__tests____Paragraph-mqc8ei-3{ } "`;
 
-exports[`skeleton elements skeleton element should have skeleton styles when data is not present 2`] = `"<div><h1 class=\\"src__StyledBaseElement-u89yob-0 hSdAbR\\">__________</h1><p class=\\"__tests____Paragraph-sc-1v531qa-3 dUtaPy\\">___________</p></div>"`;
+exports[`skeleton elements skeleton element should have skeleton styles when data is not present 2`] = `"<div><h1 class=\\"src__StyledBaseElement-sc-166q8jb-0 lcMkxs\\">__________</h1><p class=\\"__tests____Paragraph-mqc8ei-3 fTOLmz\\">___________</p></div>"`;
 
-exports[`skeleton elements skeleton element shouldn't have skeleton styles when data is present 1`] = `".__tests____Heading-sc-1v531qa-0{ } .src__StyledBaseElement-u89yob-0{ } .hSdAbR{ color:#eee; background-color:#eee; background-image:linear-gradient( 90deg,#eee,#f5f5f5,#eee ); background-size:200px 100%; background-repeat:no-repeat; border-radius:4px; display:inline-block; line-height:1; width:100%; -webkit-animation:hNBTQs 2s ease-in-out infinite; animation:hNBTQs 2s ease-in-out infinite; } .__tests____Paragraph-sc-1v531qa-1{ } @-webkit-keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } @keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } .__tests____Heading-sc-1v531qa-2{ } .__tests____Paragraph-sc-1v531qa-3{ } "`;
+exports[`skeleton elements skeleton element shouldn't have skeleton styles when data is present 1`] = `".__tests____Heading-mqc8ei-0{ } .src__StyledBaseElement-sc-166q8jb-0{ } .lcMkxs{ color:#eee; background-color:#eee; background-image:linear-gradient( 90deg,#eee,#f5f5f5,#eee ); background-size:200px 100%; background-repeat:no-repeat; border-radius:4px; display:inline-block; line-height:1; width:100%; -webkit-animation:hNBTQs 2s ease-in-out infinite; animation:hNBTQs 2s ease-in-out infinite; } .__tests____Paragraph-mqc8ei-1{ } @-webkit-keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } @keyframes hNBTQs{ 0%{ background-position:-200px 0; } 100%{ background-position:calc(200px + 100%) 0; } } .__tests____Heading-mqc8ei-2{ } .__tests____Paragraph-mqc8ei-3{ } "`;
 
-exports[`skeleton elements skeleton element shouldn't have skeleton styles when data is present 2`] = `"<div><h1 class=\\"__tests____Heading-sc-1v531qa-2 eHXXXQ\\">Eren</h1><p class=\\"__tests____Paragraph-sc-1v531qa-3 dUtaPy\\"></p></div>"`;
+exports[`skeleton elements skeleton element shouldn't have skeleton styles when data is present 2`] = `"<div><h1 class=\\"__tests____Heading-mqc8ei-2 cCsRwb\\">Eren</h1><p class=\\"__tests____Paragraph-mqc8ei-3 fTOLmz\\"></p></div>"`;
