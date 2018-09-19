@@ -6,6 +6,7 @@ __tests__
 pages
 page-components
 components
+static
 .DS_Store
 .vscode
 __diff_output__
