@@ -28,8 +28,7 @@ const Heading = Skeleton.createElement(
     color: #333;
     margin: 0 0 1rem;
     grid-area: b;
-  `,
-  createSkeletonCSSMixin("dodgerblue", "royalblue", 5)
+  `
 );
 // Base component which will be skeletonized
 class Card extends React.Component {
@@ -75,8 +74,7 @@ const Heading = Skeleton.createElement(
     color: #333;
     margin: 0 0 1rem;
     grid-area: b;
-  `,
-  createSkeletonCSSMixin("dodgerblue", "royalblue", 5)
+  `
 );
 
 // Base component which will be skeletonized
