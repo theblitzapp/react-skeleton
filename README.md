@@ -1,6 +1,11 @@
-# @solo.gg/react-skeleton
+<h1 align="center">
+    @solo.gg/react-skeleton
+</h1>
+<p align="center"> ⚡⚡⚡ Full fledged flexible skeleton loader for styled-components ⚡⚡⚡
 
-⚡⚡⚡ Full fledged flexible skeleton loader for styled-components ⚡⚡⚡
+  </p>
+  
+<a align="center" href="https://gyazo.com/394641fd462b5be9fd743d64fb31b10a"><img src="https://i.gyazo.com/394641fd462b5be9fd743d64fb31b10a.gif" alt="Image from Gyazo" width="916"/></a>
 
 <br/><br/>
 
