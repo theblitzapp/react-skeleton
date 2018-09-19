@@ -9,6 +9,16 @@
 
 <br/><br/>
 
+# Installation
+
+Add it to your project
+
+```sh
+npm i -s @solo.gg/react-skeleton
+```
+
+<br/><br/>
+
 # Examples:
 
 ## 1. Same styles (default) for all elements

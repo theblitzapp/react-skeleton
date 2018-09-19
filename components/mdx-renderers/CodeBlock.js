@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Editor } from "react-live";
 import "./prismjs-utils";
+import { Editor } from "react-live";
 import styled from "styled-components";
 
 const CodeBlock = styled(p => {
