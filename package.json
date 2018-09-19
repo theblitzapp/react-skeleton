@@ -1,6 +1,6 @@
 {
   "name": "@solo.gg/react-skeleton",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "⚡⚡⚡ Full fledged flexible skeleton loader for styled-components ⚡⚡⚡",
   "main": "lib/index.js",
   "homepage": "http://solo-gg-react-skeleton.now.sh",
