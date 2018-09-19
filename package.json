@@ -66,6 +66,11 @@
       "<rootDir>/pages"
     ]
   },
+  "peerDependencies": {
+    "styled-components": "beta",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/solomidnet/react-skeleton.git"
