@@ -1,6 +1,6 @@
-# <code>createSkeletonCSSMixin(?baseColor, ?highlightColor, ?duration)</code>
+# <code>createSkeletonCSSMixin(?baseColor, ?highlightColor, ?duration, ?textColor)</code>
 
-Helps create a mixin which is a variant of the default mixin for easy usage.
+Helps create a mixin which is a variant of the default mixin for easy usage. TextColor is transparent by default.
 
 ### Basic usage
 
@@ -21,7 +21,7 @@ const Skeleton = skeletonFactory(defaultMixin);
 ```jsx
 import skeletonFactory, {createSkeletonCSSMixin} from "@solo.gg/react-skeleton";
 
-const customMixin = createSkeletonCSSMixin("#aaa","#ccc", 5)
+const customMixin = createSkeletonCSSMixin("#aaa","#ccc", 5, "transparent")
 
 const Skeleton = skeletonFactory(customMixin);
 ...
