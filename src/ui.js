@@ -16,9 +16,10 @@ export const skeletonKeyframes = keyframes`
 export const createSkeletonCSSMixin = (
   baseColor = defaultBaseColor,
   highlightColor = defaultHighlightColor,
-  duration = 2
+  duration = 2,
+  color = "transparent"
 ) => css`
-  color: ${baseColor};
+  color: ${color};
   background-color: ${baseColor};
   background-image: linear-gradient(
     90deg,
